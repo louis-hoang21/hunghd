@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Louis Hoang</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/icomoon.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="d-flex flex-column">
+
+        <div class="profile">
+            <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+            <h1 class="text-light"><a href="index.html">Louis Hoang</a></h1>
+            <div class="social-links mt-3 text-center">
+                <!--                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
+                <!--                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>-->
+                <!--                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>-->
+                <!--                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>-->
+                <a href="https://www.linkedin.com/in/louis-hoang/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/louis-hoang21" class="linkedin"><i class="bx bxl-github"></i></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                <li><a href="index.html#blogs" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Blogs</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Download all images trên website sử dụng javascript</h2>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Download all images trên website sử dụng javascript</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="portfolio-info">
+                <div>
+                    <h3>1. Vấn đề</h3>
+                    <div>
+                        <p>Chắc hẳn trong thực tế khi làm các dự án việc phát sinh tính năng tải ảnh là rất nhiều. Ví dụ như việc đơn giản là tải 01 ảnh chúng ta có thể làm như thế này. Như đoạn code dưới quá là đơn giản đúng không, ngay trong thẻ <b><code>&lt;a&gt;</code></b> chúng ta thể thuộc tính <i>"download"</i> sẽ được tải xuống khi người dùng nhấp vào liên kết.</p>
+                        <pre class="language-none" data-filename="">
+                            <code class="language-none">
+    &lt;a href="/images/myw3schoolsimage.jpg" download&gt;
+      &lt;img src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142"&gt;
+    &lt;/a&gt;
+                            </code>
+                        </pre>
+                        <p>Nhìn qua ta thấy rõ việc tải ảnh là đơn giản đúng không. Vậy nếu ta phát sinh nhu cầu muốn click 1 lần mà tải được all ảnh thì sao? Tính năng đó không phải là một tính năng khó, đặc biệt đối với những bạn đã quá "lão luyện" javascript, nhưng đối với một số bạn "newbie" thì cũng phải mất chút thời gian tìm kiếm các giải quyết. Vậy nên hãy để mình giúp bạn. Bài viết này của mình sẽ không thiên về giải thuật hay công nghệ mà chỉ đơn giản là chia sẻ cách làm của mình để có thể giúp các bạn xử lý những tính năng này nhanh hơn. Những bạn đã quá "lão luyện" có thể bỏ qua bài này</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>2. Giải pháp</h3>
+                    <div>
+                        <p>Đâu tiên ta sẽ bắt click event ở nút tải ảnh</p>
+                        <pre class="language-none" data-filename="">
+                            <code class="language-none">
+    &lt;input type="file" class="hide" id="images-src" data-images-src="{{ json_encode($images) }}"&gt;
+                            </code>
+                        </pre>
+                        <pre class="language-none" data-filename="">
+                            <code class="language-none">
+    $(document).on("click", "#download-images-btn", function() {
+        const urls = $('#images-src').data('imagesSrc'); // get json imamges url
+        downloadImages(urls);
+    });
+                            </code>
+                        </pre>
+                        <p>
+                            Sau khi ta đã có được 1 mảng các đường dẫn ảnh ta sẽ xử lý phần lấy tên file ta sẽ sử dụng hàng splitUrl. Còn nếu bạn muốn tất cả các ảnh render ra chung 1 tên thì có bỏ qua bước này và sẽ fix cứng phần name ở bước sau.
+                        </p>
+                        <pre class="language-none" data-filename="">
+                            <code class="language-none">
+    const splitUrl = url.split("/");
+    const filename = splitUrl[splitUrl.length - 1];
+                            </code>
+                        </pre>
+                        <p>
+                            Giờ tên ảnh cũng có rồi thì mình sẽ xử lý phần ảnh. Bình thường khi bạn lấy đường dẫn ảnh từ phía server trả về thì máy bạn sẽ chưa thể lưu lại về máy được bắt buộc bạn phải xử lý về đúng định dạng. Javascript đã cung cấp cho bạn để xử lý việc đó, mình xử dụng arrayBuffer lưu ảnh dưới dạng <b>typedArray</b>, khởi tạo thành 1 object khi đi qua Blob và cuối cùng là tạo thành 1 đường dẫn từ ojbect đó createObjectURL. Chúng ta sẽ có 1 dạng như dưới ảnh
+                        </p>
+                        <div class="text-center">
+                            <img data-pil-src="https://images.viblo.asia/3b8187f7-8bff-4335-a544-6621f492c237.png" class="pil-original-img article-img medium-zoom-image" width="597" height="461" data-pil-srcset="https://images.viblo.asia/retina/3b8187f7-8bff-4335-a544-6621f492c237.png 2x" data-zoom-src="https://images.viblo.asia/full/3b8187f7-8bff-4335-a544-6621f492c237.png" src="https://images.viblo.asia/3b8187f7-8bff-4335-a544-6621f492c237.png" srcset="https://images.viblo.asia/retina/3b8187f7-8bff-4335-a544-6621f492c237.png 2x">
+                        </div>
+                        <p>
+                            Đến đoạn này thì quá dễ rồi tên ảnh và đường dẫn ảnh cũng có rồi thì mình chỉ cần khởi tạo thẻ <b><code>&lt;a&gt;</code></b> setAttribute là download append vào body đồng thời trigger click và thẻ <b><code>&lt;a&gt;</code></b> vừa tạo để tải ảnh về thôi. Mình sẽ show code ở dưới cho bạn tham khảo:
+                        </p>
+                        <pre class="language-none" data-filename="">
+                            <code class="language-none">
+    downloadImages = () =&gt; {
+        if (_.isEmpty(urls)) {
+            return false;
+        }
+
+        urls.map((url) =&gt; {
+            const splitUrl = url.split("/");
+            const filename = splitUrl[splitUrl.length - 1];
+            fetch(url)
+                .then((response) =&gt; {
+                    response.arrayBuffer().then(function (buffer) {
+                        const url = window.URL.createObjectURL(new Blob([buffer]));
+                        const link = document.createElement("a");
+                        link.href = url;
+                        link.setAttribute("download", filename); //or any other extension
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    });
+                })
+                .catch((err) =&gt; {
+                    console.log(err);
+                });
+        });
+    }
+                            </code>
+                        </pre>
+                        <p><i>Lưu ý: Nếu ảnh từ server trả về là link từ cdn thì cdn đó phải access CORS nhé, lúc ý mới tải được ảnh.</i></p>
+                    </div>
+                </div>
+                <div>
+                    <h3>3. Kết luận</h3>
+                    <div>
+                        Như vậy mình đã giúp những bạn <i>"newbie"</i> xử lý một task rất dễ dàng bằng javascript. Bài viết dựa trên những hiểu biết cá nhân nên không tránh khỏi những thiếu sót, mọi người có thắc mắc hay phản hồi gì thì hãy comment xuống bên dưới để mình có thể giải đáp cũng như bổ sung để bài viết được hoàn thiện hơn. Cảm ơn các bạn đã theo dõi bài viết.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Louis Hoang</span></strong><br>
+            <span id="copyright-years"></span>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
