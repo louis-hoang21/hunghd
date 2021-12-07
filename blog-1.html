@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Louis Hoang</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/icomoon.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="d-flex flex-column">
+
+        <div class="profile">
+            <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+            <h1 class="text-light"><a href="index.html">Louis Hoang</a></h1>
+            <div class="social-links mt-3 text-center">
+                <!--                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
+                <!--                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>-->
+                <!--                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>-->
+                <!--                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>-->
+                <a href="https://www.linkedin.com/in/louis-hoang/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/louis-hoang21" class="linkedin"><i class="bx bxl-github"></i></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                <li><a href="index.html#blogs" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Blogs</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Xử lý rowspan trong vòng lặp khi excel export</h2>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Xử lý rowspan trong vòng lặp khi excel export</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="portfolio-info">
+                <div>
+                    <h3>1. Vấn đề</h3>
+                    <div>
+                        Chắc hẳn trong đời lập trình viên ai cũng sẽ phải có 1 vài lần xử lý task liên quan đến xuất excel và gặp trường hợp cần merge rows hoặc columns ( rowspan or colspan ). Vậy hôm nay mình sẽ chia sẻ cách mình đã xử lý excel export với trường hợp rowspan sử dụng framework Laravel
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>2. Giải pháp</h3>
+                    <div>
+                        <h4>
+                            2.1 Lavel Excel
+                        </h4>
+                        <div>
+                            Để có thể excel export với laravel thì chắc hẳn rồi chúng ta phải dùng đến Lavel Excel. Nhưng do đây không phải là "nhân vật chính" trong bài viết này nên mình xin phép bỏ qua phần chi tiết và đính kèm link docs cho những bạn cần
+                            <a href="https://docs.laravel-excel.com/2.1/getting-started/" target="_blank">tìm kiểu thêm.</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>
+                            2.2 Bài toán đặt ra
+                        </h4>
+                        <div>
+                            <p>Mình đang cần xuất 1 bản excel các đơn hàng và merge cột order_id đối với những dòng có trùng <b>order_id</b></p>
+                            <p>Đây là mảng orders của mình:</p>
+                            <pre class="language-none" data-filename="">
+                                <code class="language-none">
+    Array (
+        [0] =&gt; Array
+            (
+                [order_id] =&gt; 1374282003
+                [status] =&gt; 1
+                [mark] =&gt; Casio
+                [model] =&gt; W-81
+                [price] =&gt; 10.00
+            )
+        [1] =&gt; Array
+            (
+                [order_id] =&gt; 1374282003
+                [status] =&gt; 1
+                [mark] =&gt; Casio
+                [model] =&gt; W-81
+                [price] =&gt; 10.00
+            )
+
+        [2] =&gt; Array
+            (
+                [order_id] =&gt; 1374282573
+                [status] =&gt; 1
+                [mark] =&gt; Casio
+                [model] =&gt; W-81
+                [price] =&gt; 10.00
+            )
+
+        [3] =&gt; Array
+            (
+                [order_id] =&gt; 1374282573
+                [status] =&gt; 1
+                [mark] =&gt; Casio
+                [model] =&gt; W-81
+                [price] =&gt; 10.00
+            )
+
+        [4] =&gt; Array
+            (
+                [order_id] =&gt; 1374282573
+                [status] =&gt; 1
+                [mark] =&gt; Casio
+                [model] =&gt; W-81
+                [price] =&gt; 10.00
+            )
+    )
+                                </code>
+                            </pre>
+                            <p>
+                                Đây là mong muốn phần excel được in ra dưới dạng như này mình sẽ - "trình bày dưới dạng html"
+                            </p>
+                            <pre class="language-none" data-filename="">
+                                <code class="language-none">
+    &lt;table&gt;
+        &lt;tr&gt;
+        &lt;td&gt;Order&lt;/td&gt;
+        &lt;td&gt;Product&lt;/td&gt;
+        &lt;td&gt;Price&lt;/td&gt;
+        &lt;td&gt;Status&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td rowspan="2"&gt;1374282003&lt;/td&gt;
+          &lt;td&gt;Casio&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Casio&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td rowspan="3"&gt;1374282573&lt;/td&gt;
+          &lt;td&gt;Casio&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Casio&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Casio&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+                            </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 >
+                            2.3 Code như thế nào?
+                        </h4>
+                        <div>
+                            <p>Oke! chúng ta có lẽ đến phần này là hiểu vấn đề bài toán cần làm gì rồi. Giờ bắt tay vào code thôi, Let's do it!</p>
+                            <p>
+                                Đầu tiên ta cần khai báo 1 mảng rỗng mới, mục đích chính việc này là ta sẽ gom nhóm các phần tử trùng <b>order_id</b> vào mảng mới này đồng thời đếm được số phần tử trùng <b>order_id</b> luôn. Số đếm được ta sẽ đặt là biến <b>$rowspan</b> và chỉ gán vào phần tử đầu tiên của mảng mới là thôi. Oke mình giải thích ở trên có thể sẽ khiến nhiều bạn chưa hình dùng ra được nên mình sẽ để code ở dưới để các bạn có thể hiểu rõ ý mình hơn.
+                            </p>
+                            <pre class="language-none" data-filename=""><code class="language-none">$orders = [
+            0 =&gt; [
+                'order_id'=&gt; '1374282003',
+                'status'=&gt; 1,
+                'mark'=&gt; 'Casio',
+                'model'=&gt; 'W-81',
+                'price'=&gt; 10.00,
+            ],
+            1=&gt; [
+                'order_id'=&gt; '1374282003',
+                'status'=&gt; 1,
+                'mark'=&gt; 'Casio',
+                'model'=&gt; 'W-81',
+                'price'=&gt; 10.00,
+            ],
+            2=&gt; [
+                'order_id'=&gt; '1374282573',
+                'status'=&gt; 1,
+                'mark'=&gt; 'Casio',
+                'model'=&gt; 'W-81',
+                'price'=&gt; '10.00',
+            ],
+            3=&gt; [
+                'order_id'=&gt; '1374282573',
+                'status'=&gt; 1,
+                'mark'=&gt; 'Casio',
+                'model'=&gt; 'W-81',
+                'price'=&gt; 10.00,
+            ],
+            4=&gt; [
+                'order_id'=&gt; '1374282573',
+                'status'=&gt; 1,
+                'mark'=&gt; 'Casio',
+                'model'=&gt; 'W-81',
+                'price'=&gt; 10.00,
+            ],
+        ];
+
+        $periods = [];
+
+        // handle rowspan
+        foreach($orders as $key =&gt; $period) {
+            $data = $period-&gt;toArray();
+            $data['rowspan'] = empty($data['order_id']) ? 1 : 0;
+            $periods[$data['order_id']][] = $data;
+
+           if (!empty($data['order_id'])) {
+                $periods[$data['order_id']][0]['rowspan'] = count($periods[$data['order_id']]);
+            }
+        }
+</code></pre>
+                            <p>
+                                Bạn thấy đó code phía bên trên không hề có thuật toán phức tạp nào cả, cũng không cao siêu gì. Mọi thứ đều rất cơ bản Và đây là kết quả của đoạn code trên:
+                            </p>
+                            <div class="text-center">
+                                <img src="assets/img/blogs/img-blog-1.png" alt="">
+                            </div>
+                            <p>
+                                Giờ đoạn mảng mới đã đúng mong muốn rồi thì chỉ cần đổ ra blade view thôi. Đoạn này thì đơn giản hơn rồi, chỉ cần check biến <b>rowspan > 1</b>  thì sẽ thêm thuộc tính <b>rowspan</b> còn ngược lại mình đổ data ra như bình thường.
+                            </p>
+                            <pre class="language-none" data-filename=""><code class="language-none">&lt;tbody&gt;
+@foreach($periods as $period)
+        @foreach($period as $row)
+            &lt;tr style="text-align: center; vertical-align: middle"&gt;
+
+                @if ($row['rowspan'] &gt; 0)
+                &lt;td @if($row['rowspan'] &gt; 1) rowspan="{{ $row['rowspan'] }}" @endif&gt;{{ $row['order_id'] }}&lt;/td&gt;
+                @endif
+
+                &lt;td&gt;{{ $row['mark'] . $row['model'] }}&lt;/td&gt;
+                &lt;td&gt;{{ $row['price'] }}&lt;/td&gt;
+                &lt;td&gt;{{ $row['status'] }}&lt;/td&gt;
+            &lt;/tr&gt;
+        @endforeach
+    @endforeach
+&lt;/tbody&gt;
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>3. Kết luận</h3>
+                    <div>
+                        Bài viết dựa trên những hiểu biết cá nhân nên không tránh khỏi những thiếu sót, mọi người có thắc mắc hay phản hồi gì thì hãy comment xuống bên dưới để mình có thể giải đáp cũng như bổ sung để bài viết được hoàn thiện hơn. Cảm ơn các bạn đã theo dõi bài viết.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Louis Hoang</span></strong><br>
+            <span id="copyright-years"></span>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
