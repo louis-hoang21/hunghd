@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Louis Hoang</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/icomoon.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="d-flex flex-column">
+
+        <div class="profile">
+            <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+            <h1 class="text-light"><a href="index.html">Louis Hoang</a></h1>
+            <div class="social-links mt-3 text-center">
+                <!--                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
+                <!--                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>-->
+                <!--                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>-->
+                <!--                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>-->
+                <a href="https://www.linkedin.com/in/louis-hoang/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/louis-hoang21" class="linkedin"><i class="bx bxl-github"></i></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                <li><a href="index.html#blogs" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Blogs</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Phát triển Blockchain với PHP</h2>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Phát triển Blockchain với PHP</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="portfolio-info">
+                <div>
+                    <h3>Phát triển Blockchain với PHP</h3>
+                    <div>
+                        Năm 2021 chắc hẳn là một năm bùng nổ của Blockchain, khi người người nhà nhà làm Blockchain, game NFT, Token.... Vậy nếu Blockchain được phát triển trên ngôn ngữ PHP thì sao?
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>Blockchain là gì?</h3>
+                    <div>
+                        Blockchain (hay gọi là cuốn sổ cái) là hệ thống cơ sở dữ liệu cho phép lưu trữ và truyền tải các khối thông tin (block). Chúng được liên kết với nhau nhờ mã hóa. Các khối thông tin này hoạt động độc lập và có thể mở rộng theo thời gian. Chúng được quản lý bởi những người tham gia hệ thống chứ không thông qua đơn vị trung gian. Nghĩa là khi một khối thông tin được ghi vào hệ thống Blockchain thì không có cách nào thay đổi được. Chỉ có thể bổ sung thêm khi đạt được sự đồng thuận của tất cả mọi người.
+                    </div>
+                    <br>
+                    <div>
+                        <h3>
+                            Tạo một block
+                        </h3>
+                        <div>
+                            <p>Chúng ta sẽ khởi tạo 1 class có tên là Block, Class này sẽ làm nhiệm vụ mã hóa toàn bộ dữ liệu vào thành 1 chuỗi khóa</p>
+                            <div style="position:relative" onclick="this.removeAttribute('class');">
+    <pre class="language-php" data-filename=""><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+    <span class="token keyword">class</span> <span class="token class-name-definition class-name">Block</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token variable">$index</span><span class="token punctuation">;</span> <span class="token comment">//index là key của 1 block</span>
+        <span class="token keyword">public</span> <span class="token variable">$previousHash</span><span class="token punctuation">;</span> <span class="token comment">// đây là hash của block trước</span>
+        <span class="token keyword">public</span> <span class="token variable">$timeHash</span><span class="token punctuation">;</span> <span class="token comment">// là thời gian mã hóa của block</span>
+        <span class="token keyword">public</span> <span class="token variable">$data</span><span class="token punctuation">;</span> <span class="token comment">// data là của block ( nội dung transaction chẳng hạn )</span>
+        <span class="token keyword">public</span> <span class="token variable">$hash</span><span class="token punctuation">;</span> <span class="token comment">// hash của block này</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token variable">$index</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token variable">$previousHash</span> <span class="token operator">=</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token variable">$timeHash</span> <span class="token operator">=</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token variable">$data</span> <span class="token operator">=</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+
+            <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">index</span> <span class="token operator">=</span> <span class="token variable">$index</span><span class="token punctuation">;</span>
+            <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">previousHash</span> <span class="token operator">=</span> <span class="token variable">$previousHash</span><span class="token punctuation">;</span>
+            <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">timeHash</span> <span class="token operator">=</span> <span class="token variable">$timeHash</span><span class="token punctuation">;</span>
+            <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span> <span class="token operator">=</span> <span class="token variable">$data</span><span class="token punctuation">;</span>
+            <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">hash</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">is_array</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token variable">$dataContent</span> <span class="token operator">=</span> <span class="token function">json_encode</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token variable">$dataContent</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token keyword">return</span> <span class="token function">hash</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'sha256'</span><span class="token punctuation">,</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">index</span> <span class="token operator">.</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">previousHash</span> <span class="token operator">.</span> <span class="token variable">$dataContent</span> <span class="token operator">.</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">timeHash</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    </span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Tiếp đến chúng ta tạo một class Blockchain</h3>
+                        <div>
+                            <pre class="language-php" data-filename=""><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">App<span class="token punctuation">\</span>Services</span><span class="token punctuation">;</span>
+
+<span class="token keyword">use</span> <span class="token package">Carbon<span class="token punctuation">\</span>Carbon</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">BlockChain</span> <span class="token keyword">extends</span> <span class="token class-name">Block</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token variable">$chain</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">createGenesisBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword static-context">parent</span><span class="token operator">::</span><span class="token function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">createGenesisBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Block</span><span class="token punctuation">(</span><span class="token number">0000</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'the first'</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd2'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">3000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">function</span> <span class="token function-definition function">getLatestBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">addBlock</span><span class="token punctuation">(</span><span class="token variable">$index</span><span class="token punctuation">,</span> <span class="token variable">$timeHash</span><span class="token punctuation">,</span> <span class="token variable">$data</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$previousHash</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">getLatestBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token property">hash</span><span class="token punctuation">;</span>
+        <span class="token variable">$newBlock</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Block</span><span class="token punctuation">(</span><span class="token variable">$index</span><span class="token punctuation">,</span> <span class="token variable">$previousHash</span><span class="token punctuation">,</span> <span class="token variable">$timeHash</span><span class="token punctuation">,</span> <span class="token variable">$data</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$newBlock</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</span></code></pre>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Ở đây mình sẽ tạo 1 block khi có 1 data truyền vào. Giả dụ data là 1 transaction <em>hunghd</em>  gửi tiền cho <em>hunghd2</em> thì lúc này mình sẽ tạo ra 1 Block mới. Block này là block đầu tiên thế nên index = 0 , <code>previousHash = 'the first'</code>. Và khi có thêm transaction <em>hunghd2</em> gửi cho <em>hunghd3</em> thì block tiếp theo sẽ có <code>previousHash = mã hash của block trước đó</code>. Từ đó cứ thêm transaction mới được thêm vào sẽ tạo ra thêm 1 block mới nối với các trước đó. Từ đó chúng ta có một blockchain cơ bản.
+                            Đây là code kết quả khi mình chạy thêm block:</p>
+                        <div>
+                            <pre class="language-php" data-filename=""><code class="language-php"><span class="token variable">$bl</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>App<span class="token punctuation">\</span>Services<span class="token punctuation">\</span>BlockChain</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd2'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd3'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">4000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd3'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd4'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">5000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd4'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">6000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+                        </div>
+                        <div>
+                            <pre class="language-php" data-filename=""><code class="language-php"><span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">4</span> <span class="token punctuation">[</span>▼
+  <span class="token number">0</span> <span class="token operator">=&gt;</span> App\Services\Block <span class="token punctuation">{</span><span class="token comment">#1578 ▼</span>
+    <span class="token operator">+</span>index<span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token operator">+</span>previousHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"the first"</span>
+    <span class="token operator">+</span>timeHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"10/12/2021 11:23:14"</span>
+    <span class="token operator">+</span>data<span class="token punctuation">:</span> <span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">[</span>▼
+      <span class="token string double-quoted-string">"from"</span> <span class="token operator">=&gt;</span> <span class="token string double-quoted-string">"hunghd"</span>
+      <span class="token string double-quoted-string">"to"</span> <span class="token operator">=&gt;</span> <span class="token string double-quoted-string">"hunghd2"</span>
+      <span class="token string double-quoted-string">"amount"</span> <span class="token operator">=&gt;</span> <span class="token number">3000</span>
+    <span class="token punctuation">]</span>
+    <span class="token operator">+</span>hash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"ff0525def6dcb4ad33d5784f37c88e3ca7ac356c1ac186ae13796b756faf9a05"</span>
+  <span class="token punctuation">}</span>
+  <span class="token number">1</span> <span class="token operator">=&gt;</span> App\Services\Block <span class="token punctuation">{</span><span class="token comment">#1579 ▼</span>
+    <span class="token operator">+</span>index<span class="token punctuation">:</span> <span class="token number">1</span>
+    <span class="token operator">+</span>previousHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"ff0525def6dcb4ad33d5784f37c88e3ca7ac356c1ac186ae13796b756faf9a05"</span>
+    <span class="token operator">+</span>timeHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"10/12/2021 11:23:14"</span>
+    <span class="token operator">+</span>data<span class="token punctuation">:</span> <span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">[</span>▼
+      <span class="token string double-quoted-string">"from"</span> <span class="token operator">=&gt;</span> <span class="token string double-quoted-string">"hunghd2"</span>
+      <span class="token string double-quoted-string">"to"</span> <span class="token operator">=&gt;</span> <span class="token string double-quoted-string">"hunghd3"</span>
+      <span class="token string double-quoted-string">"amount"</span> <span class="token operator">=&gt;</span> <span class="token number">4000</span>
+    <span class="token punctuation">]</span>
+    <span class="token operator">+</span>hash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"3b67c70f4e22032a7d4d0d2d0252b7b41f7ea218bfb199e647d16e4e9398f18c"</span>
+  <span class="token punctuation">}</span>
+  <span class="token number">2</span> <span class="token operator">=&gt;</span> App\Services\Block <span class="token punctuation">{</span><span class="token comment">#1580 ▼</span>
+    <span class="token operator">+</span>index<span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token operator">+</span>previousHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"3b67c70f4e22032a7d4d0d2d0252b7b41f7ea218bfb199e647d16e4e9398f18c"</span>
+    <span class="token operator">+</span>timeHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"10/12/2021 11:23:14"</span>
+    <span class="token operator">+</span>data<span class="token punctuation">:</span> <span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">[</span>▼
+      <span class="token string double-quoted-string">"from"</span> <span class="token operator">=&gt;</span> <span class="token string double-quoted-string">"hunghd3"</span>
+      <span class="token string double-quoted-string">"to"</span> <span class="token operator">=&gt;</span> <span class="token string double-quoted-string">"hunghd4"</span>
+      <span class="token string double-quoted-string">"amount"</span> <span class="token operator">=&gt;</span> <span class="token number">5000</span>
+    <span class="token punctuation">]</span>
+    <span class="token operator">+</span>hash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"ceabfe6fe846ea0ad4b44cabfebbdd1c5694d33247eba5f95210dd6d738ccadf"</span>
+  <span class="token punctuation">}</span>
+  <span class="token number">3</span> <span class="token operator">=&gt;</span> App\Services\Block <span class="token punctuation">{</span><span class="token comment">#1581 ▼</span>
+    <span class="token operator">+</span>index<span class="token punctuation">:</span> <span class="token number">3</span>
+    <span class="token operator">+</span>previousHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"ceabfe6fe846ea0ad4b44cabfebbdd1c5694d33247eba5f95210dd6d738ccadf"</span>
+    <span class="token operator">+</span>timeHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"10/12/2021 11:23:14"</span>
+    <span class="token operator">+</span>data<span class="token punctuation">:</span> <span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">[</span>▼
+      <span class="token string double-quoted-string">"from"</span> <span class="token operator">=&gt;</span> <span class="token string double-quoted-string">"hunghd4"</span>
+      <span class="token string double-quoted-string">"to"</span> <span class="token operator">=&gt;</span> <span class="token string double-quoted-string">"hunghd"</span>
+      <span class="token string double-quoted-string">"amount"</span> <span class="token operator">=&gt;</span> <span class="token number">6000</span>
+    <span class="token punctuation">]</span>
+    <span class="token operator">+</span>hash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"c77a07b3e0f8987c95310f82546237e541191a05f940dc4e9d2ca04e5c8ad3be"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Kiểm tra chain bị thay đổi hay không</h3>
+                        <div>
+                            Chúng ta đã tạo được một chain ở phía trên nhưng nếu giờ hacker muốn thay đổi 1 block bất kỳ trong chain thì sẽ như nào? Nếu mà dễ dàng thay đổi thế thì block chain đã không được thịnh hành như bây giờ rồi. Để ngăn chặn việc đó thì mình sẽ phải kiểm tra tính của chain như sau đó là lấy previousHash === hash trước đó.
+                        </div>
+                        <div>
+                            <pre class="language-php" data-filename=""><code class="language-php"><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">inValidBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token variable">$i</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$currentBlock</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token variable">$previousBlock</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token variable">$i</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$currentBlock</span><span class="token operator">-&gt;</span><span class="token property">hash</span> <span class="token operator">!==</span> <span class="token variable">$currentBlock</span><span class="token operator">-&gt;</span><span class="token function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token constant boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$currentBlock</span><span class="token operator">-&gt;</span><span class="token property">previousHash</span> <span class="token operator">!==</span> <span class="token variable">$previousBlock</span><span class="token operator">-&gt;</span><span class="token property">hash</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token constant boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token constant boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Giờ mình sẽ thử thay đổi 1 block ( thay đổi data hoặc hash ) trong chain sẽ có kết quả như sau:</h3>
+                        <div>
+                            <pre class="language-php" data-filename=""><code class="language-php"><span class="token variable">$bl</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>App<span class="token punctuation">\</span>Services<span class="token punctuation">\</span>BlockChain</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd2'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd3'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">4000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd3'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd4'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">5000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd4'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">6000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span><span class="token property">data</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd3'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'amount'</span> <span class="token operator">=&gt;</span> <span class="token number">5000</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span><span class="token property">hash</span> <span class="token operator">=</span> <span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span><span class="token function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token property">invalid</span> <span class="token operator">=</span> <span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">inValidBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+                        </div>
+                        <div>
+                            Ở đây thấy mã hash của block thứ 2 đã bị thay đổi mà block thứ 3 đã lưu lại mã hash của block thứ 2 trước khi thay đổi. Nên kết quả kiểm tra là false
+                        </div>
+                        <div>
+                            <img data-pil-src="https://images.viblo.asia/6e984ecc-1d94-46eb-8b78-d8365e604303.png" class="pil-original-img article-img medium-zoom-image" width="662" height="467" data-pil-srcset="https://images.viblo.asia/retina/6e984ecc-1d94-46eb-8b78-d8365e604303.png 2x" data-zoom-src="https://images.viblo.asia/full/6e984ecc-1d94-46eb-8b78-d8365e604303.png" src="https://images.viblo.asia/6e984ecc-1d94-46eb-8b78-d8365e604303.png" srcset="https://images.viblo.asia/retina/6e984ecc-1d94-46eb-8b78-d8365e604303.png 2x">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>Proof-of-work</h3>
+                    <div>
+                        Nhưng thực tế, <code>hash</code> và <code>previousHash</code> khi mọi người có thể thay đổi dữ liệu 1 block rồi thay <code>previousHash</code> và <code>hash</code> của các block sau là vẫn tạo được một chain hợp lệ và chúng ta cũng muốn người dùng cùng phải đồng thuận (consensus) về một lịch sử duy nhất của chain. Và proof-of-work ra đời để giải quyết vấn đề này.
+
+                        Nếu bạn muốn sửa đổi 1 block trước đó, bạn sẽ phải mine lại toàn bộ các block sau nó. Nó yêu cầu quét một giá trị bắt đầu bằng một số số 0 nhất định khi được hash. Giá trị được gọi là giá trị nonce, số bit 0 đứng đầu được gọi là difficulty. Bằng cách tăng độ khó việc khai thác, đồng nghĩa rằng việc mine sẽ ngày càng khó hơn. Chúng ta có thể làm hệ thống này bằng cách tạo method mine
+
+                        Giờ class Block mình sẽ code cuối cùng như này:
+                    </div>
+                    <div>
+                        <pre class="language-php" data-filename=""><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Block</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token variable">$index</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token variable">$previousHash</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token variable">$timeHash</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token variable">$data</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token variable">$hash</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token variable">$mineVar</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token variable">$index</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token variable">$previousHash</span> <span class="token operator">=</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token variable">$timeHash</span> <span class="token operator">=</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token variable">$data</span> <span class="token operator">=</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">index</span> <span class="token operator">=</span> <span class="token variable">$index</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">previousHash</span> <span class="token operator">=</span> <span class="token variable">$previousHash</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">timeHash</span> <span class="token operator">=</span> <span class="token variable">$timeHash</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span> <span class="token operator">=</span> <span class="token variable">$data</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">hash</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">mineVar</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">is_array</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$dataContent</span> <span class="token operator">=</span> <span class="token function">json_encode</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token variable">$dataContent</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token function">hash</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'sha256'</span><span class="token punctuation">,</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">index</span> <span class="token operator">.</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">previousHash</span> <span class="token operator">.</span> <span class="token variable">$dataContent</span> <span class="token operator">.</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">timeHash</span> <span class="token operator">.</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">mineVar</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">mine</span><span class="token punctuation">(</span><span class="token variable">$difficulty</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">str_starts_with</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">str_repeat</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'0'</span><span class="token punctuation">,</span> <span class="token variable">$difficulty</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">mineVar</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">hash</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">mineVar</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</span></code></pre>
+                    </div>
+                    <div>
+                        Trong class Blockchain cũng cần bổ sung code như này:
+                    </div>
+                    <br>
+                    <div>
+                        <pre class="language-php" data-filename=""><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">use</span> <span class="token package">Carbon<span class="token punctuation">\</span>Carbon</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">BlockChain</span> <span class="token keyword">extends</span> <span class="token class-name">Block</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token variable">$chain</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token variable">$difficulty</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token variable">$difficulty</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">createGenesisBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">difficulty</span> <span class="token operator">=</span> <span class="token variable">$difficulty</span><span class="token punctuation">;</span>
+
+        <span class="token keyword static-context">parent</span><span class="token operator">::</span><span class="token function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">createGenesisBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Block</span><span class="token punctuation">(</span><span class="token number">0000</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'the first'</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd2'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">3000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">function</span> <span class="token function-definition function">getLatestBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">addBlock</span><span class="token punctuation">(</span><span class="token variable">$index</span><span class="token punctuation">,</span> <span class="token variable">$timeHash</span><span class="token punctuation">,</span> <span class="token variable">$data</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$previousHash</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">getLatestBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token property">hash</span><span class="token punctuation">;</span>
+        <span class="token variable">$newBlock</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Block</span><span class="token punctuation">(</span><span class="token variable">$index</span><span class="token punctuation">,</span> <span class="token variable">$previousHash</span><span class="token punctuation">,</span> <span class="token variable">$timeHash</span><span class="token punctuation">,</span> <span class="token variable">$data</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token variable">$newBlock</span><span class="token operator">-&gt;</span><span class="token function">mine</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">difficulty</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$newBlock</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">inValidBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token variable">$i</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$currentBlock</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token variable">$previousBlock</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">chain</span><span class="token punctuation">[</span><span class="token variable">$i</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$currentBlock</span><span class="token operator">-&gt;</span><span class="token property">hash</span> <span class="token operator">!==</span> <span class="token variable">$currentBlock</span><span class="token operator">-&gt;</span><span class="token function">execHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token constant boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$currentBlock</span><span class="token operator">-&gt;</span><span class="token property">previousHash</span> <span class="token operator">!==</span> <span class="token variable">$previousBlock</span><span class="token operator">-&gt;</span><span class="token property">hash</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token constant boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token constant boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</span></code></pre>
+                    </div>
+                    <div>Ok!! Giờ chúng ta sẽ thử chạy xem sao</div>
+                    <div>
+                        <pre class="language-php" data-filename=""><code class="language-php"><span class="token variable">$bl</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>App<span class="token punctuation">\</span>Services<span class="token punctuation">\</span>BlockChain</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd2'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd3'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">4000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd3'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd4'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">5000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$bl</span><span class="token operator">-&gt;</span><span class="token function">addBlock</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token class-name static-context">Carbon</span><span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'d/m/Y H:i:s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'from'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd4'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'to'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'hunghd'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'amount'</span><span class="token operator">=&gt;</span> <span class="token number">6000</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+                    </div>
+                    <div>
+                        Kết quả chúng ta sẽ có các block có số nonce như mong muốn. Để tăng độ khó là 5 số 0 thì mình chỉ cần thay đổi difficulty = 5.
+                    </div>
+                    <div>
+                        <pre class="language-php" data-filename=""><code class="language-php"><span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">4</span> <span class="token punctuation">[</span>▼
+  <span class="token number">0</span> <span class="token operator">=&gt;</span> App\Services\Block <span class="token punctuation">{</span><span class="token comment">#1578 ▼</span>
+    <span class="token operator">+</span>index<span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token operator">+</span>previousHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"the first"</span>
+    <span class="token operator">+</span>timeHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"10/12/2021 11:58:04"</span>
+    <span class="token operator">+</span>data<span class="token punctuation">:</span> <span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">[</span>▶<span class="token punctuation">]</span>
+    <span class="token operator">+</span>hash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"f636898ed8e8d5ddf3db99134694921a491ebd1fc80a1b4d3eb28f8d2c7e9ed5"</span>
+    <span class="token operator">+</span>mineVar<span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+  <span class="token number">1</span> <span class="token operator">=&gt;</span> App\Services\Block <span class="token punctuation">{</span><span class="token comment">#1579 ▼</span>
+    <span class="token operator">+</span>index<span class="token punctuation">:</span> <span class="token number">1</span>
+    <span class="token operator">+</span>previousHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"f636898ed8e8d5ddf3db99134694921a491ebd1fc80a1b4d3eb28f8d2c7e9ed5"</span>
+    <span class="token operator">+</span>timeHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"10/12/2021 11:58:04"</span>
+    <span class="token operator">+</span>data<span class="token punctuation">:</span> <span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">[</span>▶<span class="token punctuation">]</span>
+    <span class="token operator">+</span>hash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"00001c87474ccbf7cc6ef4eefa0fd4499989583716f41e6373e70a1e1b89585b"</span>
+    <span class="token operator">+</span>mineVar<span class="token punctuation">:</span> <span class="token number">13413</span>
+  <span class="token punctuation">}</span>
+  <span class="token number">2</span> <span class="token operator">=&gt;</span> App\Services\Block <span class="token punctuation">{</span><span class="token comment">#1580 ▼</span>
+    <span class="token operator">+</span>index<span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token operator">+</span>previousHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"00001c87474ccbf7cc6ef4eefa0fd4499989583716f41e6373e70a1e1b89585b"</span>
+    <span class="token operator">+</span>timeHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"10/12/2021 11:58:04"</span>
+    <span class="token operator">+</span>data<span class="token punctuation">:</span> <span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">[</span>▶<span class="token punctuation">]</span>
+    <span class="token operator">+</span>hash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"0000dd0d602d647ac6e3aa4d6672073c5d229a0f2a2a12322c11b18661751639"</span>
+    <span class="token operator">+</span>mineVar<span class="token punctuation">:</span> <span class="token number">25881</span>
+  <span class="token punctuation">}</span>
+  <span class="token number">3</span> <span class="token operator">=&gt;</span> App\Services\Block <span class="token punctuation">{</span><span class="token comment">#1581 ▼</span>
+    <span class="token operator">+</span>index<span class="token punctuation">:</span> <span class="token number">3</span>
+    <span class="token operator">+</span>previousHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"0000dd0d602d647ac6e3aa4d6672073c5d229a0f2a2a12322c11b18661751639"</span>
+    <span class="token operator">+</span>timeHash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"10/12/2021 11:58:04"</span>
+    <span class="token operator">+</span>data<span class="token punctuation">:</span> <span class="token keyword type-declaration">array</span><span class="token punctuation">:</span><span class="token number">3</span> <span class="token punctuation">[</span>▶<span class="token punctuation">]</span>
+    <span class="token operator">+</span>hash<span class="token punctuation">:</span> <span class="token string double-quoted-string">"00008ae256d9ccb10c578dc77629e89c3f2bf4cc4a146758b5c57e284d9fef86"</span>
+    <span class="token operator">+</span>mineVar<span class="token punctuation">:</span> <span class="token number">5349</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+                    </div>
+                    <div>
+                        Tuy nhiên bài viết này mang tính cơ bản nên sẽ sử dụng proof-of-work. Trên thực tế công nghệ này đã lỗi thời chậm chạp, tốn tài nguyên và có hại cho môi trường nên các platform hiện nay thường sử dụng proof-of-stake.
+                    </div>
+                    <div>
+                        Đây là bài viết dựa trên sự tìm hiểu của cá nhân mình nên có nhiều sai sót mong được mọi người đóng góp thêm!!!
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>Nguồn tham khảo</h3>
+                    <div>
+                        <ul>
+                            <li><a href="https://viblo.asia/p/tu-tao-blockchain-trong-60-dong-code-javascript-1VgZvQN1KAw">https://viblo.asia/p/tu-tao-blockchain-trong-60-dong-code-javascript-1VgZvQN1KAw</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=TlW5KqOKWoQ">https://www.youtube.com/watch?v=TlW5KqOKWoQ</a></li>
+                            <li><a href="http://ilook.asia/thu-thuat/phat-trien-blockchain-voi-php-83.html">http://ilook.asia/thu-thuat/phat-trien-blockchain-voi-php-83.html</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Louis Hoang</span></strong><br>
+            <span id="copyright-years"></span>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
