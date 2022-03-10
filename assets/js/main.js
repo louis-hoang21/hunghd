@@ -246,7 +246,4 @@
       mirror: false
     })
   });
-
-  $('#copyright-years').text(new Date().getFullYear());
-
 })()
