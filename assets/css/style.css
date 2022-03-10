@@ -1169,3 +1169,7 @@ code {
   hyphens: none;
   word-wrap: break-word;
 }
+
+.dont-true {
+  text-decoration: line-through;
+}
