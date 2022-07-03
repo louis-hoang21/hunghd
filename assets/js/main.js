@@ -247,6 +247,6 @@
     })
   });
 
-  $('#copyright-years').text(new Date().getFullYear());
+  $('#copyright-years').text(2021);
 
 })()
