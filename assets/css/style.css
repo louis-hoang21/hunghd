@@ -1169,3 +1169,25 @@ code {
   hyphens: none;
   word-wrap: break-word;
 }
+
+.sub-services {
+    position: relative;
+    z-index: 0;
+    padding: 1.5em;
+    box-shadow: 0 0 56px -8px rgb(0 0 0 / 17%);
+}
+
+.sub-services.color-3 {
+    border-bottom: 2px solid #f9bf3f;
+}
+.cursor {
+    cursor: pointer;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-100-px {
+    height: 100px;
+}
