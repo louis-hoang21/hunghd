@@ -1191,3 +1191,40 @@ code {
 .h-100-px {
     height: 100px;
 }
+
+#footer-generate {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #6c757d;
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.section-generator {
+  padding-top: 20px;
+  padding-bottom: 200px;
+}
+
+#block-result {
+  padding-top: 15px;
+}
+
+.result {
+  border: 1px solid #dee2e6;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+#btn-create {
+  background-color: #CDC1FF !important;
+  color: #000000 !important;
+}
