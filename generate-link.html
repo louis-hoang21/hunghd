@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Louis Hoang</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/icomoon.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <!-- ======= Blogs Section ======= -->
+        <section class="section-generator">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Tạo link</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="col-md-12 text-bold">
+                            <label for="select-feature">Tính năng <span class="text-danger">*</span></label>
+                        </div>
+                        <br>
+                        <div class="col-md-10">
+                            <select class="form-control select-custom" name="select-feature" id="select-feature">
+                                <option value="">Vui lòng chọn</option>
+                                <option value="dynamic_link">Tên Dynamic link</option>
+                                <option value="tracking">Tạo link tracking</option>
+                                <option value="all">Tạo cả 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-none" id="form-dynamic-link">
+                            <div class="row">
+                                <div class="col-md-2"><b>Mẫu tên:</b></div>
+                                <div class="col-md-10"><b>[DBC_TAP_Group] Cosrx_VanHT_1024</b></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="gen-name-select-camp">Camp: <span class="text-danger">*</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg-4 col-md-6">
+                                        <select class="form-control" name="gen-name-select-camp" id="gen-name-select-camp">
+                                            <option value="">Vui lòng chọn</option>
+                                            <option value="TAP">TAP</option>
+                                            <option value="UGC">UGC</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="gen-name-platform">Nền tảng: <span class="text-danger">*</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg-4 col-md-6">
+                                        <select class="form-control" name="gen-name-platform" id="gen-name-platform">
+                                            <option value="">Vui lòng chọn</option>
+                                            <option value="Group">Group</option>
+                                            <option value="Zalo">Zalo</option>
+                                            <option value="Noti">Noti</option>
+                                            <option value="Email">Email</option>
+                                            <option value="Banner">Banner</option>
+                                            <option value="Popup">Popup</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="gen-name-brand">Thương hiệu: <span class="text-danger">*</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" id="gen-name-brand" value="" placeholder="Nhập tên thương hiệu">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="d-none" id="form-tracking">
+                            <hr class="d-none" id="show-border">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="tracking-original-link">Link campaign gốc: <span class="text-danger">*</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" id="tracking-original-link" value="" placeholder="Nhập link campaign gốc">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="tracking-brand">Tên Brand: <span class="text-danger">*</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" id="tracking-brand" value="" placeholder="Nhập tên brand">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="tracking-select-camp">Camp: <span class="text-danger">*</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg-4 col-md-6">
+                                        <select class="form-control" name="tracking-select-camp" id="tracking-select-camp">
+                                            <option value="">Vui lòng chọn</option>
+                                            <option value="TAP">TAP</option>
+                                            <option value="UGC">UGC</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="tracking-utm-source">Utm Source: <span class="text-danger">*</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg-4 col-md-6">
+                                        <select class="form-control" name="tracking-utm-source" id="tracking-utm-source">
+                                            <option value="">Vui lòng chọn</option>
+                                            <option value="DBC_VanHT_FBgroup">DBC_VanHT_FBgroup</option>
+                                            <option value="DBC_VanHT_Zalo">DBC_VanHT_Zalo</option>
+                                            <option value="DBC_VanHT_Noti">DBC_VanHT_Noti</option>
+                                            <option value="DBC_VanHT_Email">DBC_VanHT_Email</option>
+                                            <option value="DBC_VanHT_Banner">DBC_VanHT_Banner</option>
+                                            <option value="DBC_VanHT_Popup">DBC_VanHT_Popup</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="tracking-utm-medium">Utm medium: <span class="text-danger">*</span></label>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg-4 col-md-6">
+                                        <select class="form-control" name="tracking-utm-source" id="tracking-utm-medium">
+                                            <option value="">Vui lòng chọn</option>
+                                            <option value="Cash_Com_SPM">Cash_Com_SPM</option>
+                                            <option value="Com_SPM">Com_SPM</option>
+                                            <option value="Cash_Com">Cash_Com</option>
+                                            <option value="Cash_SPM">Cash_SPM</option>
+                                            <option value="Cash">Cash</option>
+                                            <option value="Com">Com</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row d-none" id="actions">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-success w-100" id="btn-create">Tạo</button>
+                            </div>
+
+                            <div class="row" id="block-result">
+                                <div class="col-md-8" id="block-message">
+                                    <div class="result d-none result-dynamic-link"></div>
+                                    <div class="result d-none result-tracking"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-primary result-dynamic-link" id="btn-copy-name"><i class='bx bx-copy' ></i>&nbsp;&nbsp;Copy tên</button>
+                                    <button type="button" class="btn btn-primary result-tracking" id="btn-copy-link"><i class='bx bx-copy' ></i>&nbsp;&nbsp;Copy link</button>
+                                    <span class="text-success d-none" id="message-copy"><i class='bx bx-check'></i><i>Đã copy thành công</i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer-generate">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Louis Hoang</span></strong><br>
+                <span id="copyright-years">2021</span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/generate-link.js"></script>
+
+</body>
+
+</html>
