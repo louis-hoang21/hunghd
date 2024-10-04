@@ -179,7 +179,7 @@ const GenerateLink = (function() {
                 blockResultTracking.each((index, item) => {
                     $(item).removeClass('d-none');
                 });
-                sendTelegram(`Tạo thành công tên: \`\`\`\`${resultTracking}\`\`\`\``)
+                sendTelegram(`Tạo thành công tracking link: \`\`\`\`${resultTracking}\`\`\`\``)
             }
 
             if (resultDynamicLink.length > 0) {
